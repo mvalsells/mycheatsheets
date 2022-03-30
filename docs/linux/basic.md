@@ -1,7 +1,7 @@
 # Linux basic commands
-## Moving arround
 
-#### Listing directories
+## Moving arround
+### Listing directories
 |Command      | Description
 |-------------|--------------
 | `ls`        | Show contents of the current directory
@@ -14,4 +14,9 @@
 | `tree -a`   | Also list hidden items
 | `tree -L X` | Only list files and folder up to X levels
 | `tree -d`   | Only list directories, ignore files
-| `pwd`       | Get absolute path to the current directory
+| `pwd`       | Get absolute path of the current directory
+
+**The golden ones**
+- `ls -lha` -> List all files (including hidden) in with human readable size
+- `tree -L 3` -> Show files and folders of the current directory and up to 3 sub-directories
+- `pwd` -> Get absolute path of the current directory

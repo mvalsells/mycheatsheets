@@ -1,3 +1,8 @@
 site_name: My Cheat Sheets
 theme:
   name: material
+
+
+#Respository
+repo_name: mvalsells/mycheatsheets
+repo_url: https://github.com/mvalsells/mycheatsheets

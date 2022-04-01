@@ -1,1 +1,4 @@
-site/
+# Build files
+/build
+/MANIFEST
+/site

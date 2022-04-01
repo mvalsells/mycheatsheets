@@ -2,6 +2,9 @@ site_name: My Cheat Sheets
 theme:
   name: material
 
+plugins:
+  - search
+  - git-revision-date
 
 #Respository
 repo_name: mvalsells/mycheatsheets

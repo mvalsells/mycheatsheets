@@ -1,11 +1,16 @@
-site_name: My Cheat Sheets
+# Project information
+site_name: My Cheatsheets
+site_url: https://valsells.me/mycheatsheets
+site_author: Marc Valsells Niubó
+site_description: In this site I will be adding commands cheatsheets that I think they will be useful me and others
+
 theme:
   name: material
 
 plugins:
-  - search
   - git-revision-date
 
 #Respository
 repo_name: mvalsells/mycheatsheets
 repo_url: https://github.com/mvalsells/mycheatsheets
+edit_uri: edit/main/docs

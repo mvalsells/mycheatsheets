@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+# Welcome to my cheatsheets
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+In this site I will be adding commands cheatsheets that I think they will be useful for me (and others) during my studies and, hopefully, when I start working.
 
-## Commands
+!!! warning
+    This site is a work in progress and might suffer important changes in the following weeks/months
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+## Cheatsheets
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [Linux basics](/linux/basic)
+- [CCNA 2](/networking/CCNA2/)
+- [CCNA 3](networking/CCNA2/)
+
+## Authors
+
+Contributors names and contact info
+
+* Marc Valsells Niubó ([valsells.me](https://valsells.me/))
+
+
+## License
+
+This project is licensed under the Apache-2.0 License - see the [license page](/license) for details.

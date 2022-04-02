@@ -8,9 +8,9 @@ In this site I will be adding commands cheatsheets that I think they will be use
 
 ## Cheatsheets
 
-- [Linux basics](/linux/basic)
-- [CCNA 2](/networking/CCNA2/)
-- [CCNA 3](networking/CCNA2/)
+- [Linux basics](linux/basic.md)
+- [CCNA 2](networking/CCNA2.md)
+- [CCNA 3](networking/CCNA2.md)
 
 ## Authors
 

@@ -52,11 +52,59 @@ R1(config)# access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 e
 R1(config)#ip access-list extended HTTP_ONLY
 R1(config-ext-nacl)#permit tcp 172.22.34.96 0.0.0.15 host  172.22.34.62 eq www
 R1(config-ext-nacl)#permit icmp 172.22.34.96 0.0.0.15 host  172.22.34.62
-----
+---
 R1(config)#interface gigabitEthernet 0/0
 R1(config-if)#ip access-group 100 in
 R1(config-if)# ip access-group HTTP_ONLY in
 ---
 RT1# show running-config | begin access-list
 RT1# show ip access-lists
+```
+
+### M6 - NAT
+###### Static
+```
+R1(config)# ip nat inside source static 172.16.16.1 64.100.50.1
+R1(config)# interface g0/0
+R1(config-if)# ip nat inside
+R1(config)#interface s0/0/0
+R1(config-if)#ip nat outside
+```
+
+###### Port Address Translation (PAT) / NAT overload
+```
+! Create ACL for insde IPs
+R1(config)# access-list 1 permit 172.16.0.0 0.0.255.255
+! Option 1 - Create IP Pool for outside IPs
+R1(config)# ip nat pool ANY_POOL_NAME 209.165.200.233 209.165.200.234 netmask 255.255.255.252
+! Associate ACL with POLL
+R1(config)# ip nat inside source list 1 pool ANY_POOL_NAME overload
+! Option 2 - Set out interface instead of pool
+R1(config)# ip nat inside source list 2 interface s0/1/0 overload
+! Interfaces inside/outside
+R1(config)# interface s0/1/0
+R1(config-if)# ip nat outside
+R1(config-if)# interface g0/0/0
+R1(config-if)# ip nat inside
+R1(config-if)# interface g0/0/1
+R1(config-if)# ip nat inside
+```
+##### Shows
+```
+R1# show run | include nat
+R1# show ip nat translations
+R1# show ip nat statistics
+```
+### M10 - Network Management
+###### Cisco Discovery Protocol (CDP)
+
+```
+Branch-Edge(config)# cdp run
+Branch-Edge(config)# interface s0/0/1
+Branch-Edge(config-if)# no cdp enable
+Branch-Edge(config-if)# exit
+---
+Branch-Edge# show cdp
+Branch-Edge# show cdp neighbors
+Branch-Edge# show cdp neighbors detail
 ```

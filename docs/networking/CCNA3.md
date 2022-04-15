@@ -108,3 +108,14 @@ Branch-Edge# show cdp
 Branch-Edge# show cdp neighbors
 Branch-Edge# show cdp neighbors detail
 ```
+##### Link Layer Discovery Protocol (LLDP)
+```
+Edge(config)# lldp run
+Edge(config)# int g0/0
+Edge(config-if)# no lldp transmit
+Edge(config-if)# exit
+---
+Branch-Edge# show lldp
+Branch-Edge# show lldp neighbors
+Branch-Edge# show cdp neighbors detail
+```

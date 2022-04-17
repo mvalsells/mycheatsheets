@@ -113,11 +113,11 @@ S1(config-if-range)# no shutdown
 ## M7 - DHCPv4
 ##### DHCP server
 ```
-R2(config)# ip dhcp excluded-address 192.168.10.1 192.168.10.10
-R2(config)# ip dhcp pool R1-LAN
-R2(dhcp-config)# network 192.168.10.0 255.255.255.0
-R2(dhcp-config)# default-router 192.168.10.1
-R2(dhcp-config)# dns-server 192.168.20.254
+R1(config)# ip dhcp excluded-address 192.168.10.1 192.168.10.10
+R1(config)# ip dhcp pool R1-LAN
+R1(dhcp-config)# network 192.168.10.0 255.255.255.0
+R1(dhcp-config)# default-router 192.168.10.1
+R1(dhcp-config)# dns-server 192.168.20.254
 ```
 ##### DHCP relay
 ```
@@ -126,14 +126,14 @@ R1(config-if)# ip helper-address 10.1.1.2
 ```
 ##### DHCP Client
 ```
-R2(config)# interface g0/1
-R2(config-if)# ip address dhcp
+R1(config)# interface g0/1
+R1(config-if)# ip address dhcp
 ```
 ##### Shows
 ```
-R2# show ip dhcp binding
-R2# show ip dhcp pool
-R2# show ip dhcp server statistics
+R1# show ip dhcp binding
+R1# show ip dhcp pool
+R1# show ip dhcp server statistics
 ```
 ## M9 - FHRP (First Hop Reduncy Protocol)
 ##### HSRP (Hot Standby Router Protocol)

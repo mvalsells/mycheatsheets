@@ -143,3 +143,30 @@ R1# show lldp
 R1# show lldp neighbors
 R1# show cdp neighbors detail
 ```
+#### NTP - Network Time Protocol
+NTP maximum hop count is 15 (stratum 16).
+
+- **Stratum 0:** Authoritative  time sources which are high-precision timekeeping devices.
+- **Stratum 1:** Devices that are directly connected (children) to authoritative time sources (stratum 0 devices)
+- **Stratum 2 - 15:** Devices connected to other none authoritative devices which acts as a bridge from the time source
+- **Stratum > 15:** Unsynchronized device
+
+```
+R1(config)# ntp server 209.165.200.225
+---
+R1# show clock detail
+R1# show ntp status
+R1# show ntp associations
+```
+#### TFTP and IOS images
+```
+! If more than one active interface source may be need to specified
+R1(config)# ip tftp source interface g0/0
+R1# copy tftp: flash:
+R1# show flash:
+! On router
+R1(config)# boot system flash c1900-universalk9-mz.SPA.155-3.M4a.bin
+! On switch
+S1(config)# boot system c2960-lanbasek9-mz.150-2.SE4.bin
+R1# reload
+```

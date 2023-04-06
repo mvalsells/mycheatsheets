@@ -174,6 +174,129 @@ R1# show ipv6 eigrp interfaces
 R1# show ipv6 eigrp interfaces gi0/1 detail
 R1# show ipv6 eigrp neighbors
 ```
+## CH6 and CH7 - OSPFv2
+#### Routing process
+##### Router method
+```
+! 123 is the process id, doesn't need to match between devices
+R1(config)# router ospf 123
+R1(config-router)# router-id 1.1.1.1
+! Advertising each network by interface IP
+R1(config-router)# network 10.10.0.2 0.0.0.0 area 0
+! Advertising multiple/all networks with wildcards
+R1(config-router)# network 10.10.0.0 0.0.255.255 area 1
+R1(config-router)# network 0.0.0.0 255.255.255.255 area 0
+R1(config-router)# default-information originate
+R1# clear ip ospf process
+```
+
+##### Interface method
+```
+R1(config)# router ospf 123
+R1(config-router)# router-id 1.1.1.1
+R1(config)# interface loopback 1
+R1(config-if)# ip ospf network point-to-point ! Only on loopbacks
+R1(config-if)# ip ospf 123 area 0
+R1(config-if)# exit
+R1# clear ip ospf process
+```
+
+#### OSPF tuning
+```
+! OSPF general parameters
+D1(config)# router ospf 123
+D1(config-router)# passive-interface default
+D1(config-router)# no passive-interface g1/0/5
+R1(config-router)# auto-cost reference-bandwidth 10000
+! Timers
+R1(config)# interface g0/0/1
+R1(config-if)# ip ospf hello-interval 5
+R1(config-if)# ip ospf dead-interval 20
+! DR and BDR election
+D2(config)# interface g0/0/1
+D2(config-if)# ip ospf priority 0   ! Never become DR or BDR candidate
+R1(config-if)# ip ospf priority 255 ! Always become DR or BDR candidate
+```
+!!! warning
+    By default the OSPF cost reference is equivelent to a 100Mbps. This means that a 100Mbps or higher speed links will have the same cost value of 1 by default.
+    
+    It is recomended to set the reference bandwith to 10000 (10Gbps), but this will cause that links slower than 1.5Mbps will have the same cost of 65.535.
+
+
+#### Shows
+```
+R1# show ip protocols
+R1# show ip route ospf
+R1# show ip ospf interface brief
+R1# show ip ospf interface g0/0/1
+R1# show ip ospf neighbor
+R1# show ip ospf neighbor detail
+R1# show ip ospf database
+R1# show ip ospf database router        ! Type 1 LSA
+R1# show ip ospf database network       ! Type 2 LSA
+R1# show ip ospf database summary       ! Type 3 LSA
+R1# show ip ospf database asbr-summary  ! Type 4 LSA
+R1# show ip ospf database external      ! Type 5 LSA
+```
+
+## CH9 - OSPFv3
+#### Routing process
+
+##### Address family method (new devices)
+```
+! 123 is the process id, doesn't need to match between devices
+R1(config)# ipv6 router ospf 123
+R1(config-router)# router-id 1.1.1.1            ! For all AF
+R1(config-router)# address-family ipv4 unicast
+R1(config-router-af)# router-id 1.1.1.1         ! For a specific AF
+R1(config-router-af)# default-information originate
+R1(config-router)# address-family ipv6 unicast
+R1(config-router-af)# router-id 1.1.1.1         ! For a specfic AF
+R1(config-router-af)# default-information originate
+R1(config)# interface g0/0/0
+R1(config-if)# ospfv3 123 ipv4 area 0
+R1(config-if)# ospfv3 123 ipv6 area 0
+```
+
+##### Interface method (old devices)
+```
+! 123 is the process id, doesn't need to match between devices
+R1(config)# ipv6 router ospf 123
+R1(config-rtr)# router-id 1.1.1.1
+R1(config)# interface g0/0/0
+R1(config-if)# ipv6 ospf 123 area 1
+```
+#### OSPFv3 tuning
+```
+! Passive interface - old
+D1(config)# ipv6 router ospf 123
+D1(config-rtr)# passive-interface g1/0/23
+! Passive interface - new
+D2(config)# router ospfv3 123
+D2(config-router)# passive-interface g1/0/23    ! For all AF
+D2(config-router)# address-family ipv4 unicast
+D2(config-router-af)# passive-interface g1/0/23 ! For a specific AF
+
+! Summarization
+R1(config)# router ospfv3 123
+R1(config-router)# address-family ipv6 unicast
+R1(config-router-af)# area 1 range 2001:db8:acad:1000::/52
+
+! Change network type
+R1(config)# interface g0/0/1
+R1(config-if)# ospfv3 network point-to-point
+```
+
+#### Shows
+```
+D1# show ipv6 ospfv3
+D1# show ipv6 protocols
+D1# show ipv6 route ospf
+D1# show ipv6 ospf neighbor ! Old
+R1# show ospfv3 neighbor    ! New
+R1# show ospfv3 database
+R2# show ospfv3 interface brief
+```
 
 ## CH11 - BGP
 #### Routing process
@@ -237,6 +360,7 @@ R1(config)# router bgp 1000
 R1(config-router)# bgp router-id 1.1.1.1
 ! Disable enabled by default
 R1(config-router)# no bgp default ipv4-unicast
+
 ! Declare neighbors
 R1(config-router)# neighbor 10.1.2.2 remote-as 500
 R1(config-router)# neighbor 2001:db8:acad:1012::2 remote-as 500

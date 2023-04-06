@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="In this site I will be adding commands cheatsheets that I think they will be useful me and others">
+      
+      
+        <meta name="author" content="Marc Valsells Niubó">
+      
+      
+        <link rel="canonical" href="https://valsells.me/mycheatsheets/networking/CCNA3/">
+      
+      
+        <link rel="prev" href="../CCNA2/">
+      
+      
+        <link rel="next" href="../ccnp-enarsi/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>CCNA 3 - My Cheatsheets</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ccna-3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Cheatsheets" class="md-header__button md-logo" aria-label="My Cheatsheets" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Cheatsheets
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CCNA 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mvalsells/mycheatsheets" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mvalsells/mycheatsheets
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Cheatsheets" class="md-nav__button md-logo" aria-label="My Cheatsheets" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mvalsells/mycheatsheets" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mvalsells/mycheatsheets
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome to my cheatsheets
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/basic/" class="md-nav__link">
+        Linux basic commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Networking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CCNA2/" class="md-nav__link">
+        CCNA 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CCNA 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CCNA 3
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#m2-single-area-ospf" class="md-nav__link">
+    M2 - Single-area OSPF
+  </a>
+  
+    <nav class="md-nav" aria-label="M2 - Single-area OSPF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    Global
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m5-acls-for-ipv4" class="md-nav__link">
+    M5 - ACLs for IPv4
+  </a>
+  
+    <nav class="md-nav" aria-label="M5 - ACLs for IPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    Standard
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-acls-rules" class="md-nav__link">
+    Create ACLs rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-acls-rules" class="md-nav__link">
+    Modify ACLs rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended" class="md-nav__link">
+    Extended
+  </a>
+  
+    <nav class="md-nav" aria-label="Extended">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-acls-rules_1" class="md-nav__link">
+    Create ACLs rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-acls-rules_1" class="md-nav__link">
+    Modify ACLs rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-acl-to-an-interface" class="md-nav__link">
+    Apply ACL to an interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_1" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m6-nat" class="md-nav__link">
+    M6 - NAT
+  </a>
+  
+    <nav class="md-nav" aria-label="M6 - NAT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    Static
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-address-translation-pat-nat-overload" class="md-nav__link">
+    Port Address Translation (PAT) / NAT overload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat-interfaces" class="md-nav__link">
+    NAT interfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_2" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m10-network-management" class="md-nav__link">
+    M10 - Network Management
+  </a>
+  
+    <nav class="md-nav" aria-label="M10 - Network Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisco-discovery-protocol-cdp" class="md-nav__link">
+    Cisco Discovery Protocol (CDP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Cisco Discovery Protocol (CDP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabledisable" class="md-nav__link">
+    Enable/disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_3" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-layer-discovery-protocol-lldp" class="md-nav__link">
+    Link Layer Discovery Protocol (LLDP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Link Layer Discovery Protocol (LLDP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabledisable_1" class="md-nav__link">
+    Enable/disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_4" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntp-network-time-protocol" class="md-nav__link">
+    NTP - Network Time Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tftp-and-ios-images" class="md-nav__link">
+    TFTP and IOS images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccnp-enarsi/" class="md-nav__link">
+        CCNP - ENARSI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#m2-single-area-ospf" class="md-nav__link">
+    M2 - Single-area OSPF
+  </a>
+  
+    <nav class="md-nav" aria-label="M2 - Single-area OSPF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    Global
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m5-acls-for-ipv4" class="md-nav__link">
+    M5 - ACLs for IPv4
+  </a>
+  
+    <nav class="md-nav" aria-label="M5 - ACLs for IPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    Standard
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-acls-rules" class="md-nav__link">
+    Create ACLs rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-acls-rules" class="md-nav__link">
+    Modify ACLs rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended" class="md-nav__link">
+    Extended
+  </a>
+  
+    <nav class="md-nav" aria-label="Extended">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-acls-rules_1" class="md-nav__link">
+    Create ACLs rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-acls-rules_1" class="md-nav__link">
+    Modify ACLs rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-acl-to-an-interface" class="md-nav__link">
+    Apply ACL to an interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_1" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m6-nat" class="md-nav__link">
+    M6 - NAT
+  </a>
+  
+    <nav class="md-nav" aria-label="M6 - NAT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    Static
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-address-translation-pat-nat-overload" class="md-nav__link">
+    Port Address Translation (PAT) / NAT overload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat-interfaces" class="md-nav__link">
+    NAT interfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_2" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m10-network-management" class="md-nav__link">
+    M10 - Network Management
+  </a>
+  
+    <nav class="md-nav" aria-label="M10 - Network Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisco-discovery-protocol-cdp" class="md-nav__link">
+    Cisco Discovery Protocol (CDP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Cisco Discovery Protocol (CDP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabledisable" class="md-nav__link">
+    Enable/disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_3" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-layer-discovery-protocol-lldp" class="md-nav__link">
+    Link Layer Discovery Protocol (LLDP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Link Layer Discovery Protocol (LLDP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabledisable_1" class="md-nav__link">
+    Enable/disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_4" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntp-network-time-protocol" class="md-nav__link">
+    NTP - Network Time Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tftp-and-ios-images" class="md-nav__link">
+    TFTP and IOS images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ccna-3">CCNA 3</h1>
+<h2 id="m2-single-area-ospf">M2 - Single-area OSPF</h2>
+<h5 id="global">Global</h5>
+<div class="highlight"><pre><span></span><code>! Where 10 is the ospf process-id
+R1(config)# router ospf 10
+R1(config-router)# router-id 1.1.1.1
+R1(config-router)# network 192.168.10.0 0.0.0.255 area 0
+R1(config-router)# default-information originate
+R1# clear ip ospf process
+</code></pre></div>
+<h5 id="interface">Interface</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# interface s0/0/0
+R1(config-if)# ip ospf 10 area 0
+R1(config-if)# ip ospf priority 200
+R1(config-if)# ip ospf hello-interval 15
+R1(config-if)# ip ospf dead-interval 60
+R1(config-if)# bandwidth 64 !in kbps
+</code></pre></div>
+<h5 id="shows">Shows</h5>
+<div class="highlight"><pre><span></span><code>R1# show ip ospf
+R1# show ip ospf neighbor
+R1# show ip ospf interface
+R1# show ip route ospf
+R1# show ip protocols
+</code></pre></div>
+<h2 id="m5-acls-for-ipv4">M5 - ACLs for IPv4</h2>
+<h4 id="standard">Standard</h4>
+<h5 id="create-acls-rules">Create ACLs rules</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# access-list 1 remark Allow R1 LANs Access
+R1(config)# access-list 1 permit 192.168.10.0 0.0.0.255
+R1(config)# access-list 1 permit 192.168.20.0 0.0.0.255
+R1(config)# access-list 1 deny any
+</code></pre></div>
+<h5 id="modify-acls-rules">Modify ACLs rules</h5>
+<div class="highlight"><pre><span></span><code>R1#(config)# ip access-list standard BRANCH-OFFICE-POLICY
+R1(config-std-nacl)# 30 permit 209.165.200.224 0.0.0.31
+R1(config-std-nacl)# 40 deny any
+</code></pre></div>
+<h4 id="extended">Extended</h4>
+<h5 id="create-acls-rules_1">Create ACLs rules</h5>
+<div class="highlight"><pre><span></span><code>! Option 1
+R1(config)# access-list 89 permit tcp 172.2.34.4 0.0.0.31 host 10.22.4.62 eq ftp
+! Option 2
+R1(config)# ip access-list extended HTTP_ONLY
+R1(config-ext-nacl)# permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www
+R1(config-ext-nacl)# permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62
+</code></pre></div>
+<h5 id="modify-acls-rules_1">Modify ACLs rules</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# ip access-list extended HTTP_ONLY
+R1(config-ext-nacl)# 25 permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq 53
+R1(config-ext-nacl)# 4 permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62
+</code></pre></div>
+<h4 id="apply-acl-to-an-interface">Apply ACL to an interface</h4>
+<div class="highlight"><pre><span></span><code>R1(config)# interface g0/0/0
+R1(config-if)# ip access-group 1 out
+R1(config-if)# ip access-group BRANCH-OFFICE-POLICY in
+</code></pre></div>
+<h4 id="shows_1">Shows</h4>
+<div class="highlight"><pre><span></span><code>R1# show access-lists
+R1# show access-lists 34
+R1# show access-lists LAN-ACL
+R1# show running-config | begin access-list
+R1# show ip access-lists
+!To see which ACL is applied to the interface
+R1# show ip interface g0/0/0
+</code></pre></div>
+<h2 id="m6-nat">M6 - NAT</h2>
+<h5 id="static">Static</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# ip nat inside source static 172.16.16.1 64.100.50.1
+R1(config)# interface g0/0
+R1(config-if)# ip nat inside
+R1(config)#interface s0/0/0
+R1(config-if)#ip nat outside
+</code></pre></div>
+<h5 id="port-address-translation-pat-nat-overload">Port Address Translation (PAT) / NAT overload</h5>
+<div class="highlight"><pre><span></span><code>! Create ACL for insde IPs
+R1(config)# access-list 1 permit 172.16.0.0 0.0.255.255
+
+! Option 1 - Create IP pool for outside IPs
+R1(config)# ip nat pool NAME 209.15.20.233 209.15.20.234 netmask 255.255.255.252
+R1(config)# ip nat inside source list 1 pool NAME overload
+
+! Option 2 - Set out interface instead of a pool
+R1(config)# ip nat inside source list 2 interface s0/1/0 overload
+</code></pre></div>
+<h5 id="nat-interfaces">NAT interfaces</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# interface s0/1/0
+R1(config-if)# ip nat outside
+R1(config-if)# interface g0/0/0
+R1(config-if)# ip nat inside
+</code></pre></div>
+<h5 id="shows_2">Shows</h5>
+<div class="highlight"><pre><span></span><code>R1# show run | include nat
+R1# show ip nat translations
+R1# show ip nat statistics
+</code></pre></div>
+<h2 id="m10-network-management">M10 - Network Management</h2>
+<h4 id="cisco-discovery-protocol-cdp">Cisco Discovery Protocol (CDP)</h4>
+<h5 id="enabledisable">Enable/disable</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# cdp run
+R1(config)# interface s0/0/1
+R1(config-if)# no cdp enable
+R1(config-if)# exit
+</code></pre></div>
+<h5 id="shows_3">Shows</h5>
+<div class="highlight"><pre><span></span><code>R1# show cdp
+R1# show cdp neighbors
+R1# show cdp neighbors detail
+</code></pre></div>
+<h4 id="link-layer-discovery-protocol-lldp">Link Layer Discovery Protocol (LLDP)</h4>
+<h5 id="enabledisable_1">Enable/disable</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# lldp run
+R1(config)# int g0/0
+R1(config-if)# no lldp transmit
+R1(config-if)# exit
+</code></pre></div>
+<h5 id="shows_4">Shows</h5>
+<div class="highlight"><pre><span></span><code>R1# show lldp
+R1# show lldp neighbors
+R1# show cdp neighbors detail
+</code></pre></div>
+<h4 id="ntp-network-time-protocol">NTP - Network Time Protocol</h4>
+<p>NTP maximum hop count is 15 (stratum 16).</p>
+<ul>
+<li><strong>Stratum 0:</strong> Authoritative  time sources which are high-precision timekeeping devices.</li>
+<li><strong>Stratum 1:</strong> Devices that are directly connected (children) to authoritative time sources (stratum 0 devices)</li>
+<li><strong>Stratum 2 - 15:</strong> Devices connected to other none authoritative devices which acts as a bridge from the time source</li>
+<li><strong>Stratum &gt; 15:</strong> Unsynchronized device</li>
+</ul>
+<div class="highlight"><pre><span></span><code>R1(config)# ntp server 209.165.200.225
+---
+R1# show clock detail
+R1# show ntp status
+R1# show ntp associations
+</code></pre></div>
+<h4 id="tftp-and-ios-images">TFTP and IOS images</h4>
+<div class="highlight"><pre><span></span><code>! If more than one active interface source may be need to specified
+R1(config)# ip tftp source interface g0/0
+R1# copy tftp: flash:
+R1# show flash:
+! On router
+R1(config)# boot system flash c1900-universalk9-mz.SPA.155-3.M4a.bin
+! On switch
+S1(config)# boot system c2960-lanbasek9-mz.150-2.SE4.bin
+R1# reload
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2023-04-06
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>

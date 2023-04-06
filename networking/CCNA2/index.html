@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="In this site I will be adding commands cheatsheets that I think they will be useful me and others">
+      
+      
+        <meta name="author" content="Marc Valsells Niubó">
+      
+      
+        <link rel="canonical" href="https://valsells.me/mycheatsheets/networking/CCNA2/">
+      
+      
+        <link rel="prev" href="../../linux/basic/">
+      
+      
+        <link rel="next" href="../CCNA3/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>CCNA 2 - My Cheatsheets</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ccna-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Cheatsheets" class="md-header__button md-logo" aria-label="My Cheatsheets" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Cheatsheets
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CCNA 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mvalsells/mycheatsheets" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mvalsells/mycheatsheets
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Cheatsheets" class="md-nav__button md-logo" aria-label="My Cheatsheets" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mvalsells/mycheatsheets" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mvalsells/mycheatsheets
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome to my cheatsheets
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/basic/" class="md-nav__link">
+        Linux basic commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Networking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CCNA 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CCNA 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m1-basic-device-configuration" class="md-nav__link">
+    M1 - Basic device configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="M1 - Basic device configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m2-intervlan-routing" class="md-nav__link">
+    M2 - InterVLAN routing
+  </a>
+  
+    <nav class="md-nav" aria-label="M2 - InterVLAN routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subinterfaces" class="md-nav__link">
+    Subinterfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m3-vlans" class="md-nav__link">
+    M3 - VLANs
+  </a>
+  
+    <nav class="md-nav" aria-label="M3 - VLANs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vlans-and-switchport-basics" class="md-nav__link">
+    VLANs and switchport basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dtp" class="md-nav__link">
+    DTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m6-etherchannel" class="md-nav__link">
+    M6 - EtherChannel
+  </a>
+  
+    <nav class="md-nav" aria-label="M6 - EtherChannel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagp" class="md-nav__link">
+    PAgP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lacp" class="md-nav__link">
+    LACP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m7-dhcpv4" class="md-nav__link">
+    M7 - DHCPv4
+  </a>
+  
+    <nav class="md-nav" aria-label="M7 - DHCPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-server" class="md-nav__link">
+    DHCP server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-relay" class="md-nav__link">
+    DHCP relay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-client" class="md-nav__link">
+    DHCP Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_1" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m9-fhrp-first-hop-reduncy-protocol" class="md-nav__link">
+    M9 - FHRP (First Hop Reduncy Protocol)
+  </a>
+  
+    <nav class="md-nav" aria-label="M9 - FHRP (First Hop Reduncy Protocol)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hsrp-hot-standby-router-protocol" class="md-nav__link">
+    HSRP (Hot Standby Router Protocol)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m11-switch-security" class="md-nav__link">
+    M11 - Switch security
+  </a>
+  
+    <nav class="md-nav" aria-label="M11 - Switch security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-security" class="md-nav__link">
+    Port-security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_2" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CCNA3/" class="md-nav__link">
+        CCNA 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccnp-enarsi/" class="md-nav__link">
+        CCNP - ENARSI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m1-basic-device-configuration" class="md-nav__link">
+    M1 - Basic device configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="M1 - Basic device configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m2-intervlan-routing" class="md-nav__link">
+    M2 - InterVLAN routing
+  </a>
+  
+    <nav class="md-nav" aria-label="M2 - InterVLAN routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subinterfaces" class="md-nav__link">
+    Subinterfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m3-vlans" class="md-nav__link">
+    M3 - VLANs
+  </a>
+  
+    <nav class="md-nav" aria-label="M3 - VLANs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vlans-and-switchport-basics" class="md-nav__link">
+    VLANs and switchport basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dtp" class="md-nav__link">
+    DTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m6-etherchannel" class="md-nav__link">
+    M6 - EtherChannel
+  </a>
+  
+    <nav class="md-nav" aria-label="M6 - EtherChannel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagp" class="md-nav__link">
+    PAgP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lacp" class="md-nav__link">
+    LACP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m7-dhcpv4" class="md-nav__link">
+    M7 - DHCPv4
+  </a>
+  
+    <nav class="md-nav" aria-label="M7 - DHCPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-server" class="md-nav__link">
+    DHCP server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-relay" class="md-nav__link">
+    DHCP relay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-client" class="md-nav__link">
+    DHCP Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_1" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m9-fhrp-first-hop-reduncy-protocol" class="md-nav__link">
+    M9 - FHRP (First Hop Reduncy Protocol)
+  </a>
+  
+    <nav class="md-nav" aria-label="M9 - FHRP (First Hop Reduncy Protocol)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hsrp-hot-standby-router-protocol" class="md-nav__link">
+    HSRP (Hot Standby Router Protocol)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m11-switch-security" class="md-nav__link">
+    M11 - Switch security
+  </a>
+  
+    <nav class="md-nav" aria-label="M11 - Switch security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-security" class="md-nav__link">
+    Port-security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows_2" class="md-nav__link">
+    Shows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ccna-2">CCNA 2</h1>
+<h2 id="basic">Basic</h2>
+<div class="highlight"><pre><span></span><code>R1(config)# no ip domain-lookup
+R1(config)# enable secret class
+R1(config)# service password-encryption
+R1(config)# banner motd $Access restricted$
+R1(config)# clock set 12:58:20 JAN 2022
+---
+R1(config)# line vty 0 9999
+R1(config-line)# password cisco
+R1(config-line)# login
+---
+R1(config)# line console 0
+R1(config-line)# password cisco
+R1(config-line)# login
+</code></pre></div>
+<h2 id="m1-basic-device-configuration">M1 - Basic device configuration</h2>
+<h5 id="ssh">SSH</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# ip domain-name cisco.com
+R1(config)# crypto key generate rsa
+R1(config)# user admin secret ccna
+R1(config)# line vty 0 15
+R1(config-line)# transport input ssh
+R1(config-line)# login local
+</code></pre></div>
+<h2 id="m2-intervlan-routing">M2 - InterVLAN routing</h2>
+<h5 id="subinterfaces">Subinterfaces</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# int g0/0.10
+R1(config-subif)# encapsulation dot1Q 10
+R1(config-subif)# encapsulation dot1Q 11 native
+R1(config-subif)# ip address 172.17.10.1 255.255.255.0
+</code></pre></div>
+<h2 id="m3-vlans">M3 - VLANs</h2>
+<h5 id="vlans-and-switchport-basics">VLANs and switchport basics</h5>
+<div class="highlight"><pre><span></span><code>S1(config)# vlan 100
+S1(config-vlan)# name Operations
+---
+S1(config-if)# switchport mode trunk
+S1(config-if)# switchport trunk native vlan 1000
+S1(config-if)# switchport trunk allowed vlan 100,200,1000
+S1(config-if)# switchport mode access
+S1(config-if)# switchport access vlan 10
+---
+S1# delete vlan.dat
+</code></pre></div>
+<h5 id="dtp">DTP</h5>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Dynamic auto</th>
+<th>Dynamic desirable</th>
+<th>Trunk</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dynamic Auto</td>
+<td>Access</td>
+<td>Trunk</td>
+<td>Trunk</td>
+<td>Access</td>
+</tr>
+<tr>
+<td>Dynamic desirable</td>
+<td>Trunk</td>
+<td>Trunk</td>
+<td>Trunk</td>
+<td>Access</td>
+</tr>
+<tr>
+<td>Trunk</td>
+<td>Trunk</td>
+<td>Trunk</td>
+<td>Trunk</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Access</td>
+<td>Access</td>
+<td>Access</td>
+<td>Limited</td>
+<td>Access</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>S1(config-if)# switchport mode dynamic auto
+S1(config-if)# switchport mode dynamic desirable
+S1(config-if)# switchport mode trunk
+S1(config-if)# switchport mode access
+! DTP can be disable with nonegotiate
+S1(config-if)# switchport nonegotiate
+</code></pre></div>
+<h5 id="shows">Shows</h5>
+<div class="highlight"><pre><span></span><code>S1# show interfaces trunk
+S1# show vlan
+S1# show dtp interface fa0/1
+</code></pre></div>
+<h2 id="m6-etherchannel">M6 - EtherChannel</h2>
+<h5 id="modes">Modes</h5>
+<ul>
+<li><strong>active</strong> -&gt; Enable LACP unconditionally</li>
+<li><strong>auto</strong> -&gt; Enable PAgP only if a PAgP device is detected</li>
+<li><strong>desirable</strong> -&gt; Enable PAgP unconditionally</li>
+<li><strong>on</strong> -&gt; Enable Etherchannel without any negotiation protocol</li>
+<li><strong>passive</strong> -&gt; Enable LACP only if a LACP device is detected</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>active</th>
+<th>passive</th>
+<th>desirable</th>
+<th>auto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>active</td>
+<td>LACP</td>
+<td>LACP</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>passive</td>
+<td>LACP</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>desirable</td>
+<td>-</td>
+<td>-</td>
+<td>PAgP</td>
+<td>PAgP</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>-</td>
+<td>-</td>
+<td>PAgP</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pagp">PAgP</h5>
+<div class="highlight"><pre><span></span><code>S1(config)# interface range f0/21 – 22
+S1(config-if-range)# shutdown
+S1(config-if-range)# channel-group 1 mode desirable
+S1(config-if-range)# no shutdown
+</code></pre></div>
+<h5 id="lacp">LACP</h5>
+<div class="highlight"><pre><span></span><code>S1(config)# interface range g0/1 - 2
+S1(config-if-range)# shutdown
+S1(config-if-range)# channel-group 2 mode active
+S1(config-if-range)# no shutdown
+</code></pre></div>
+<h2 id="m7-dhcpv4">M7 - DHCPv4</h2>
+<h5 id="dhcp-server">DHCP server</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# ip dhcp excluded-address 192.168.10.1 192.168.10.10
+R1(config)# ip dhcp pool R1-LAN
+R1(dhcp-config)# network 192.168.10.0 255.255.255.0
+R1(dhcp-config)# default-router 192.168.10.1
+R1(dhcp-config)# dns-server 192.168.20.254
+</code></pre></div>
+<h5 id="dhcp-relay">DHCP relay</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# interface g0/0
+R1(config-if)# ip helper-address 10.1.1.2
+</code></pre></div>
+<h5 id="dhcp-client">DHCP Client</h5>
+<div class="highlight"><pre><span></span><code>R1(config)# interface g0/1
+R1(config-if)# ip address dhcp
+</code></pre></div>
+<h5 id="shows_1">Shows</h5>
+<div class="highlight"><pre><span></span><code>R1# show ip dhcp binding
+R1# show ip dhcp pool
+R1# show ip dhcp server statistics
+</code></pre></div>
+<h2 id="m9-fhrp-first-hop-reduncy-protocol">M9 - FHRP (First Hop Reduncy Protocol)</h2>
+<h5 id="hsrp-hot-standby-router-protocol">HSRP (Hot Standby Router Protocol)</h5>
+<div class="highlight"><pre><span></span><code>R1(config-if)# standby version 2
+R1(config-if)# standby 1 ip 192.168.1.254
+! Default priority is 100, higher -&gt; active Router
+R1(config-if)# standby 1 priority 150
+! Preempt makes this router active after recovery
+R1(config-if)# standby 1 preempt
+---
+R1# show standby
+</code></pre></div>
+<h2 id="m11-switch-security">M11 - Switch security</h2>
+<h5 id="port-security">Port-security</h5>
+<div class="highlight"><pre><span></span><code>S1(config-if)# switchport port-security
+S1(config-if)# switchport port-security maximum 1
+S1(config-if)# switchport port-security mac-address sticky
+S1(config-if)# switchport port-security violation restrict
+</code></pre></div>
+<h5 id="shows_2">Shows</h5>
+<div class="highlight"><pre><span></span><code>S1# show port-security
+S1# show port-security address
+S1# show port-security interface f0/2
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2023-04-06
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+    
+  </body>
+</html>
